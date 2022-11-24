@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外围元素包含浮动元素，浮动元素保持高度占位方法1</title>
+    <style type="text/css">
+        #d1 {
+            float: left;
+            width: 100px;
+            height: 150px;
+            background-color: #ff82a4;
+        }
+
+        #d2 {
+            float: left;
+            width: 100px;
+            height: 150px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+<div style="border: 1px solid red;">
+    <div id="d1">
+        div1
+    </div>
+
+    <div id="d2">
+        div1
+    </div>
+    <div style="clear:left;"></div>
+
+</div>
+
+
+
+</body>
+
+</html>

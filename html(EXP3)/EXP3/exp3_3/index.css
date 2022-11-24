@@ -1,0 +1,90 @@
+/* 清除li样式 */
+ul,li{
+    list-style: none;
+}
+
+label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+        
+label:hover {
+    cursor: pointer;
+}
+        
+input[type="radio"] {
+    display: none;
+}
+    
+input[type="radio"]:checked+label {
+    background-color: #5177bf;
+    color: white;
+}
+        
+input[type="radio"]:checked+label+div {
+    display: block;
+}
+
+div {
+    align-items: center;
+}
+
+.mainWindow {
+    width: 550px;
+    height: 250px;
+    margin: auto;
+    border: 1px solid #ccc!important;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(204, 204, 204);
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    align-self: center;
+}
+
+
+
+.separator {
+    width: 530px;
+    margin: auto;
+}
+
+.contentIndex {
+    color:rgb(19, 44, 120);
+}
+
+.textContent {
+    width: 350px;
+}
+
+.index {
+    margin: auto;
+}
+        
+.content {
+    background-color: aliceblue;
+}
+        
+.content div {
+    display: none;
+}
+        
+#hotRank:checked~.content>#content1,
+#commentRank:checked~.content>#content2,
+#imageRank:checked~.content>#content3 {
+    display: block;
+}

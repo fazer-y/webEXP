@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #frame,#frame2,#frame3,#frame4{
+            border: solid 1px red;
+            float:left;
+        }
+        .box{
+            float:left;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border: solid 1px green;
+            text-align: center;
+        }
+        .clearL{
+            clear: left;
+        }
+        #big{
+            float: left;
+            width: 100%;
+            border: solid 1px #060980;
+        }
+        #left{
+            float: left;
+            border: solid 1px #801a39;
+        }
+        #right{
+            float: right;
+            border: solid 1px #804e1e;
+        }
+    </style>
+</head>
+<body>
+   <div id="big">
+       <div id="left">
+            <div id="frame">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+            <div class="clearL"></div>
+            <div id="frame2">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </div>
+       </div>
+       <div id="right">
+           <div id="frame3">
+               <div class="box">A</div>
+               <div class="box">B</div>
+               <div class="box">C</div>
+           </div>
+           <div class="clearL"></div>
+           <div id="frame4">
+               <div class="box">A</div>
+               <div class="box">B</div>
+               <div class="box">C</div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

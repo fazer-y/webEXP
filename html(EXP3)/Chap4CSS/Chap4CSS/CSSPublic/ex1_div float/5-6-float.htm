@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>保持外部float元素保持占位</title>
+    <style type="text/css">
+        #d0 {
+            float: left;
+            width: 100px;
+            height: 150px;
+            background-color: #ff82a4;
+        }
+
+        #d1 {
+            float: left;
+            width: 100px;
+            height: 150px;
+            background-color: pink;
+        }
+
+
+        #d3 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+        }
+
+        #d4 {
+            width: 200px;
+            height: 200px;
+            background-color: #41fff8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div style="float:left; border: 1px solid red;">
+    <div id="d0">
+        div0
+    </div>
+
+    <div id="d1">
+        div1
+    </div>
+
+</div>
+
+
+<div style="clear1: left"></div>
+
+<div id="d3">
+    div3
+</div>
+<div id="d4">
+    div4
+</div>
+
+
+</body>
+
+</html>

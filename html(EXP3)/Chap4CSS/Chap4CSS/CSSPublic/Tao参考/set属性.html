@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            border: solid 1px red;
+            width: 80px;
+            height: 110px;
+            float: left;
+            margin-right: 20px;
+        }
+        div img {
+            width: 100%;
+            height: 100%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+     <div>
+         <img id="imgleft" src="img/01.jpg" alt="">
+     </div>
+     <div>
+         <img id="imgright" src="" alt="">
+     </div>
+     <script type="text/javascript">
+         var imgleft=document.getElementById("imgleft")
+         var imgright=document.getElementById("imgright")
+
+         imgright.onclick=function (ev) {
+             if (this.getAttribute("src") == "") {
+                 var src = imgleft.getAttribute("src");
+                 this.setAttribute("src", src);
+                 imgleft.setAttribute("src", "");
+             }
+         }
+         imgleft.onclick=function (ev) {
+             if (this.getAttribute("src") == "") {
+                 var src = imgright.getAttribute("src");
+                 this.setAttribute("src", src);
+                 imgright.setAttribute("src", "");
+             }
+         }
+         var flag=false;
+         var dask=setInterval(function () {
+             if (flag == false) {
+                 imgright.click();
+                 flag = true;
+             } else {
+                 imgleft.click();
+                 flag = false;
+             }
+         },1000);
+         setTimeout(function () {
+             clearInterval(dask)
+         },5000)
+     </script>
+</body>
+</html>

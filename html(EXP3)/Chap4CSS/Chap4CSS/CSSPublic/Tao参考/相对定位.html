@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #parent{
+            position: relative;
+            border: solid 1px red;
+        }
+        #parent div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            left:200px;
+        }
+        #top{
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            background-color: blue;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+       <div id="top">这是一个固定的条幅</div>
+       <div style="height: 1000px;margin-top: 35px">这一个不错的网站</div>
+</body>
+</html>

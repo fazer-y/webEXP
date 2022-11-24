@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位应用实例</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #father {
+            margin: 0px auto;
+            background-color: #FF9966;
+            border: 1px dashed #000000;
+            padding: 0px;
+            position: relative; /*包含块加relative*/
+            width: 80%;
+            height: 200px;
+        }
+
+        #block1 {
+            background-color: #fff0ac;
+            border: 1px dashed #000000;
+            padding: 10px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        #block2 {
+            background-color: #fff0ac;
+            border: 1px dashed #000000;
+            padding: 10px;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="father">
+    <div id="block1">1绝对定位应用实例</div>
+    <div id="block2">2绝对定位应用实例</div>
+    testtest
+</div>
+</body>
+</html>

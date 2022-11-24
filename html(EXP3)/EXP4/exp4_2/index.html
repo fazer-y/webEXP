@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验4-2</title>
+    <style type="text/css">
+        .thLeft {
+            text-align: right;
+        }
+
+        .registerTable {
+            /* border-radius: 1px;
+            border-style:double;
+            border: 1; */
+            border-collapse: collapse;
+        }
+        tr,td,th {
+            border: 3 gray;
+            border-radius: 1px;
+            border-style:solid;
+        }
+        button {
+            margin: 4px;
+        }
+    </style>
+    <script type="text/javascript">
+        function submit_Click(){
+            // 获取表单信息
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            var pwdAgain = document.getElementById("passwordAgain").value;
+            var gender = "";
+            if (document.getElementById("man").checked == true){
+                gender = "男";
+            }
+            else{
+                gender = "女";
+            }
+            var homeLand = document.getElementById("homeLand");
+            var index = homeLand.selectedIndex;
+            var home = homeLand.options[index].text;
+            alert(userName+password+pwdAgain+gender+home);
+        }
+
+        function reset_Click(){
+            
+        }
+    </script>
+</head>
+<body>
+    <div align="left">
+        <a href="../index.html" target="_self">返回实验四目录</a>
+    </div>
+    <div class="container" align="center">
+        <form name="registerForm" onsubmit="submit_Click()" onreset="reset_Click()">
+            <table class="registerTable">
+                <tr>
+                    <td colspan="2" class="thTop" align="center">
+                        <p>用户注册</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thLeft">
+                        <p>用户名：</p>
+                    </td>
+                    <td>
+                        <input type="text" id="userName" placeholder="请输入用户名"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thLeft">
+                        <p>密码：</p>
+                    </td>
+                    <td>
+                        <input type="text" id="password" placeholder="请输入密码"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thLeft">
+                        <p>密码确认：</p>
+                    </td>
+                    <td>
+                        <input type="text" id="passwordAgain" placeholder="请确认密码"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thLeft">
+                        <p>性别：</p>
+                    </td>
+                    <td>
+                        <input type="radio" id="man" name="gender" checked="checked"/>
+                        <label for="man">男</label>
+                        <input type="radio" id="women" name="gender"/>
+                        <label for="women">女</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thLeft">
+                        <p>你来自：</p>
+                    </td>
+                    <td>
+                        <label>
+                            <select name="homeLand" id="homeLand" aria-label="State">
+                                <option value="none" style="display: none;" disabled selected>请选择</option>
+                                <option value="SD">山东</option>
+                                <option value="JX">江西</option>
+                                <option value="JS">江苏</option>
+                                <option value="GD">广东</option>
+                                <option value="AH">安徽</option>
+                            </select> 
+                        </label>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thLeft">
+                        <p>自我介绍：</p>
+                    </td>
+                    <td>
+                        <textarea rows="5" cols="35" name="briefIntroduction" placeholder="自我介绍一下吧"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="提交">
+                        <input type="reset" value="重置"></td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

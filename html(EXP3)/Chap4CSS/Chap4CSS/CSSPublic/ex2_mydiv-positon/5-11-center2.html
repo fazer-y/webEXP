@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位应用实例</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #father {
+            margin: 0px auto;
+            background-color: #a0c8ff;
+            border: 1px dashed #000000;
+            width: 80%;
+            height: 200px;
+            padding: 0px;
+            position: relative;
+        }
+
+        #block1 {
+            background-color: #fff0ac;
+            border: 1px dashed #000000;
+            padding: 10px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        #block2 {
+            background-color: #fff0ac;
+            border: 1px dashed #000000;
+            padding: 10px;
+            position: relative;
+            left: 40px;
+            top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="father">
+    <div id="block1">绝对定位应用实例不占用位置</div>
+    test1test1
+    <div id="block2">相对定位应用实例</div>
+    test2test2
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #photo{
+            position: relative;
+        }
+        #photo img{
+            width: 200px;
+            height: 300px;
+            position: absolute;
+        }
+        #photo img:hover{
+            width: 194px;
+            height: 294px;
+            position: absolute;
+            border: solid 3px red;
+        }
+        img:nth-child(2){
+            left: 100px;
+            top:50px;
+            z-index: 999;
+        }
+        img:nth-child(3){
+            left: 200px;
+            top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="photo">
+        <img src="img/01.jpg" alt="">
+        <img src="img/02.jpg" alt="">
+        <img src="img/03.jpg" alt="">
+    </div>
+</body>
+</html>

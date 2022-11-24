@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./index.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验3-2 学习并利用 iframe 标记制作课表</title>
+    <style type="text/css" media="all">
+        .pageTitle {
+            text-align: center;
+            width: 1100px;
+        }
+
+        .pageContent {
+            width: 1200px;
+        }
+
+        .table {
+            padding-left: 30px;
+            float: left;
+        }
+
+        .index {
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+
+        .dayIndex {
+            padding-top: 14px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="left">
+        <a href="../index.html" target="_self">返回实验三目录</a>
+    </div>
+    <div>
+        <div class="pageTitle">
+            <h1>林鹏飞2022-2023学年秋季学期课程表</h1>
+        </div>
+        <div class="pageContent">
+            <div class="table index">
+                <div class="dayIndex">
+                    <a href="total.html" target="frame1">全周</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="1.html" target="frame1">星期一</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="2.html" target="frame1">星期二</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="3.html" target="frame1">星期三</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="4.html" target="frame1">星期四</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="5.html" target="frame1">星期五</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="6.html" target="frame1">星期六</a>
+                </div>
+                <div class="dayIndex">
+                    <a href="7.html" target="frame1">星期日</a>
+                </div>
+            </div>
+            <div class="table">
+                <iframe name="frame1" , align="center" , valign="center" , src="./total.html" , width="850" , seamless ,
+                    height="500"></iframe>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
