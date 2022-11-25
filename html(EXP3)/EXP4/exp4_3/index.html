@@ -1,223 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>实验4-3</title>
-    <style type="text/css">
-        body {
-            font-family: "隶书";
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<title>实验4-3</title>
+		<style type="text/css">
+			body {
+				font-family: "隶书";
+			}
 
-        #container {
-            margin: 0px auto;
-            width: 407px;
-            padding: 0px;
-            position: relative;
-        }
+			#container {
+				margin: 0px auto;
+				width: 407px;
+				padding: 0px;
+				position: relative;
+			}
 
-        ul {
-            list-style: none;
-            margin: 0px;
-            padding: 0px;
-            float: left;
-        }
+			ul {
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				float: left;
+			}
 
-        ul li {
-            margin: 5px 0px;
-            float: left;
-        }
+			ul li {
+				margin: 5px 0px;
+				float: left;
+			}
 
-        #news {
-            border: solid 1px #ccc;
-            width: 367px;
-            padding: 8px 20px 30px 20px;
-            float: left;
-        }
+			#news {
+				border: solid 1px #ccc;
+				width: 367px;
+				padding: 8px 20px 30px 20px;
+				float: left;
+			}
 
-        .title {
-            float: left;
-            width: 100%;
-            border-bottom: solid 1px #ccc;
-        }
+			.title {
+				float: left;
+				width: 100%;
+				border-bottom: solid 1px #ccc;
+			}
 
-        .title span {
-            float: left;
-            width: 66px;
-            border: solid 0px red;
-            padding: 8px;
-            margin-right: 8px;
-            font-size: 16px;
-        }
+			.title span {
+				float: left;
+				width: 66px;
+				border: solid 0px red;
+				padding: 8px;
+				margin-right: 8px;
+				font-size: 16px;
+			}
 
-        .title span:hover {
-            float: left;
-            width: 66px;
-            border: solid 0px red;
-            padding: 8px;
-            margin-right: 8px;
-			background-color: cornflowerblue;
-            color: white;
-        }
+			.title span:hover {
+				float: left;
+				width: 66px;
+				border: solid 0px red;
+				padding: 8px;
+				margin-right: 8px;
+				background-color: cornflowerblue;
+				color: white;
+			}
 
-        .content {
-            width: 357px;
-            border: solid 0px red;
-            margin-top: 20px;
-            float: left;
-        }
+			.content {
+				width: 357px;
+				border: solid 0px red;
+				margin-top: 20px;
+				float: left;
+			}
 
-        .content span {
-            float: left;
-            font-size: 13px;
-        }
+			.content span {
+				float: left;
+				font-size: 13px;
+			}
 
-        .content span:nth-child(1) {
-            width: 32px;
-            color: cornflowerblue;
-        }
+			.content span:nth-child(1) {
+				width: 32px;
+				color: cornflowerblue;
+			}
 
-        .content span:nth-child(2) {
-            width: 268px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+			.content span:nth-child(2) {
+				width: 268px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 
-        .content span:nth-child(3) {
-            color: #ccc;
-            width: 57px;
-        }
+			.content span:nth-child(3) {
+				color: #ccc;
+				width: 57px;
+			}
 
-        .clearL {
-            clear: left;
-        }
+			.clearL {
+				clear: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div align="left">
+			<a
+				href="../index.html"
+				target="_self"
+				>返回实验四目录</a
+			>
+		</div>
 
-    </style>
-</head>
-<body>
-<div align="left">
-    <a href="../index.html" target="_self">返回实验四目录</a>
-</div>
+		<div id="container">
+			<div id="news">
+				<div class="title">
+					<span id="hotRankHeader">热点排行</span>
+					<span id="cmtRankHeader">评论排行</span>
+					<span id="picRankHeader">图片排行</span>
+				</div>
+				<div class="clearL"></div>
+				<div
+					class="content"
+					id="hotRank"
+					display="contents"
+				>
+					<ul>
+						<li>
+							<span>01</span>
+							<span>任务部署比五年前翻一番！中纪委今年反腐要这么干</span>
+							<span>999999</span>
+						</li>
+						<li>
+							<span>02</span>
+							<span>54.7亿理财涉嫌违规！工行13家分行收到千万级罚单</span>
+							<span>999999</span>
+						</li>
+						<li>
+							<span>03</span>
+							<span>任务部署比五年前翻一番！中纪委今年反腐要这么干</span>
+							<span>999999</span>
+						</li>
+						<li>
+							<span>04</span>
+							<span>54.7亿理财涉嫌违规！工行13家分行收到千万级罚单</span>
+							<span>999999</span>
+						</li>
+						<li>
+							<span>05</span>
+							<span>任务部署比五年前翻一番！中纪委今年反腐要这么干</span>
+							<span>999999</span>
+						</li>
+						<li>
+							<span>06</span>
+							<span>54.7亿理财涉嫌违规！工行13家分行收到千万级罚单</span>
+							<span>999999</span>
+						</li>
+					</ul>
+				</div>
+				<div
+					class="content"
+					style="display: none"
+					id="commentRank"
+				>
+					<ul>
+						<li>
+							<span>01</span>
+							<span
+								>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span
+							>
+							<span>999997</span>
+						</li>
+						<li>
+							<span>02</span>
+							<span
+								>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span
+							>
+							<span>999997</span>
+						</li>
+						<li>
+							<span>03</span>
+							<span
+								>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span
+							>
+							<span>999997</span>
+						</li>
+						<li>
+							<span>04</span>
+							<span
+								>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span
+							>
+							<span>999997</span>
+						</li>
+						<li>
+							<span>05</span>
+							<span
+								>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span
+							>
+							<span>999997</span>
+						</li>
+						<li>
+							<span>06</span>
+							<span
+								>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span
+							>
+							<span>999997</span>
+						</li>
+					</ul>
+				</div>
+				<div
+					class="content"
+					style="display: none"
+					id="pictureRank"
+				>
+					<ul>
+						<li>
+							<span>01</span>
+							<span
+								>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span
+							>
+							<span>999998</span>
+						</li>
+						<li>
+							<span>02</span>
+							<span
+								>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span
+							>
+							<span>999998</span>
+						</li>
+						<li>
+							<span>03</span>
+							<span
+								>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span
+							>
+							<span>999998</span>
+						</li>
+						<li>
+							<span>04</span>
+							<span
+								>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span
+							>
+							<span>999998</span>
+						</li>
+						<li>
+							<span>05</span>
+							<span
+								>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span
+							>
+							<span>999999</span>
+						</li>
+						<li>
+							<span>06</span>
+							<span
+								>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span
+							>
+							<span>999998</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 为表头三个span添加点击事件
+			document.getElementById("hotRankHeader").onclick = function () {
+				document.getElementById("hotRank").style =
+					"display: contents, margin-top: 20px;";
+				document.getElementById("commentRank").style = "display:none";
+				document.getElementById("pictureRank").style = "display: none";
+			};
 
-<div id="container">
-    <div id="news">
-        <div class="title">
-            <span>热点排行</span>
-            <span>评论排行</span>
-            <span>图片排行</span>
-        </div>
-        <div class="clearL"></div>
-        <div class="content">
-            <ul>
-                <li>
-                    <span>01</span>
-                    <span>任务部署比五年前翻一番！中纪委今年反腐要这么干</span>
-                    <span>999999</span>
-                </li>
-                <li>
-                    <span>02</span>
-                    <span>54.7亿理财涉嫌违规！工行13家分行收到千万级罚单</span>
-                    <span>999999</span>
-                </li>
-                <li>
-                    <span>03</span>
-                    <span>任务部署比五年前翻一番！中纪委今年反腐要这么干</span>
-                    <span>999999</span>
-                </li>
-                <li>
-                    <span>04</span>
-                    <span>54.7亿理财涉嫌违规！工行13家分行收到千万级罚单</span>
-                    <span>999999</span>
-                </li>
-                <li>
-                    <span>05</span>
-                    <span>任务部署比五年前翻一番！中纪委今年反腐要这么干</span>
-                    <span>999999</span>
-                </li>
-                <li>
-                    <span>06</span>
-                    <span>54.7亿理财涉嫌违规！工行13家分行收到千万级罚单</span>
-                    <span>999999</span>
-                </li>
-            </ul>
+			document.getElementById("cmtRankHeader").onclick = function () {
+				document.getElementById("hotRank").style = "display: none";
+				document.getElementById("commentRank").style =
+					"display:contents, margin-top=20px";
+				document.getElementById("pictureRank").style = "display: none";
+			};
 
-        </div>
-        <div class="content" style="display: none">
-            <ul>
-                <li>
-                    <span>01</span>
-                    <span>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span>
-                    <span>999997</span>
-                </li>
-                <li>
-                    <span>02</span>
-                    <span>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span>
-                    <span>999997</span>
-                </li>
-                <li>
-                    <span>03</span>
-                    <span>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span>
-                    <span>999997</span>
-                </li>
-                <li>
-                    <span>04</span>
-                    <span>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span>
-                    <span>999997</span>
-                </li>
-                <li>
-                    <span>05</span>
-                    <span>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span>
-                    <span>999997</span>
-                </li>
-                <li>
-                    <span>06</span>
-                    <span>习近平告诉你，我们的制度优势如何成为治理体系和治理能力</span>
-                    <span>999997</span>
-                </li>
-            </ul>
-
-        </div>
-        <div class="content" style="display: none">
-            <ul>
-                <li>
-                    <span>01</span>
-                    <span>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span>
-                    <span>999998</span>
-                </li>
-                <li>
-                    <span>02</span>
-                    <span>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span>
-                    <span>999998</span>
-                </li>
-                <li>
-                    <span>03</span>
-                    <span>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span>
-                    <span>999998</span>
-                </li>
-                <li>
-                    <span>04</span>
-                    <span>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span>
-                    <span>999998</span>
-                </li>
-                <li>
-                    <span>05</span>
-                    <span>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span>
-                    <span>999999</span>
-                </li>
-                <li>
-                    <span>06</span>
-                    <span>拒绝别人蹭网，教你几招简单方法，踢掉那些疯狂偷网速的陌生人</span>
-                    <span>999998</span>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-  
-
-</script>
-</body>
-
+			document.getElementById("picRankHeader").onclick = function () {
+				document.getElementById("hotRank").style = "display: none";
+				document.getElementById("commentRank").style = "display: none";
+				document.getElementById("pictureRank").style =
+					"display: contents, margin-top: 20px;";
+			};
+		</script>
+	</body>
 </html>
