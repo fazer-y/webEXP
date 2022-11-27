@@ -2,17 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>实验4-4</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>实验4-4</title>
+	<script type="text/javascript">
+		// 课程数据json格式
+		var courseData = {
+			MON: [{
+				cName: "计算机网络",
+				tName: "程杰",
+				time: "星期一 1-2",
+				cRoom: "商学院448",
+			}, ],
+			TUE: [{
+					cName: "数字图像处理",
+					tName: "张亚涛",
+					time: "星期二 1-2",
+					cRoom: "商学院551",
+				},
+				{
+					cName: "计算机图形学",
+					tName: "杨飞",
+					time: "星期二 3-4",
+					cRoom: "图东教学楼222",
+				},
+			],
+			WEN: [{
+					cName: "数字图像处理",
+					tName: "张亚涛",
+					time: "星期三 1-2（双周）",
+					cRoom: "商学院248",
+				},
+				{
+					cName: "形势与政策",
+					tName: "邹汶洋",
+					time: "星期三 3-4（5-8周）",
+					cRoom: "商学院248",
+				},
+				{
+					cName: "习近平新时代中国特色社会主义思想概论",
+					tName: "靳贺",
+					time: "星期三 3-4（9-16周）",
+					cRoom: "商学院347",
+				},
+			],
+			THU: [{
+					cName: "计算机网络",
+					tName: "程杰",
+					time: "星期四 1-2",
+					cRoom: "商学院448",
+				},
+				{
+					cName: "计算机图形学",
+					tName: "杨飞",
+					time: "星期四 3-4",
+					cRoom: "图东教学楼222",
+				},
+			],
+			FRI: [{
+				cName: "Web技术",
+				tName: "刘猛",
+				time: "星期五 1-2",
+				cRoom: "海洋学院605",
+			}, ],
+		};
+
+		// 通过class名获取所有同class元素
+		function getElementsByClassName(name) {
+			var arr = [];
+			var arr2 = document.getElementsByTagName("*");
+			for (var i = 0; i < arr2.length; i++) {
+				if (arr2[i].className == name) {
+					arr[arr.length] = arr2[i];
+				}
+			}
+			return arr;
+		}
+
+		// 向表格中添加tr
+		function addTD(tbody, data) {
+			for (var j = 0; j < data.length; j++) {
+				var course = data[j];
+				var tr1 = document.createElement("TR");
+				tr1.setAttribute("class", "courseRow");
+
+				var tdc = document.createElement("TD");
+				var txt1 = document.createTextNode(course["cName"]);
+				tdc.appendChild(txt1);
+				tr1.appendChild(tdc);
+
+				var tdt = document.createElement("TD");
+				txt1 = document.createTextNode(course["tName"]);
+				tdt.appendChild(txt1);
+				tr1.appendChild(tdt);
+
+				var tdtime = document.createElement("TD");
+				txt1 = document.createTextNode(course["time"]);
+				tdtime.appendChild(txt1);
+				tr1.appendChild(tdtime);
+
+				var tdr = document.createElement("TD");
+				txt1 = document.createTextNode(course["cRoom"]);
+				tdr.appendChild(txt1);
+				tr1.appendChild(tdr);
+
+				tbody.appendChild(tr1);
+			}
+		}
+
+		function daySelectyClick(e, day) {
+			// 移除现有课程内容
+			var trs = [];
+			var tbody =
+				document.getElementById("courseTable").childNodes[1];
+			trs = getElementsByClassName("courseRow");
+			for (var i = 0; i < trs.length; i++) {
+				tbody.removeChild(trs[i]);
+			}
+
+			// 动态添加课程信息
+			var dayList = ["MON", "TUE", "WEN", "THU", "FRI"];
+			if (day == 0) {
+				for (var i = 0; i < dayList.length; i++) {
+					day = dayList[i];
+					var data = courseData[day];
+					addTD(tbody, data);
+				}
+			} else if (day >= 1 && day <= 5) {
+				var day = dayList[day - 1];
+				var data = courseData[day];
+				addTD(tbody, data);
+			}
+		}
+	</script>
 </head>
 
 <body>
-    <div align="left">
-        <a href="../index.html" target="_self">返回实验四目录</a>
-    </div>
-
+	<div align="left">
+		<a href="../index.html" target="_self">返回实验四目录</a>
+	</div>
+	<table align="center" , width="1000" , cellpadding="2">
+		<tr>
+			<td align="center" valign="top">
+				<h1 align="center">林鹏飞2022-2023学年秋季学期课程表</h1>
+			</td>
+		</tr>
+		<tr align="center">
+			<td>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 0)">全周</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 1)">星期一</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 2)">星期二</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 3)">星期三</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 4)">星期四</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 5)">星期五</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 6)">星期六</a>
+				<a href="javascript:void(0)" onclick="daySelectyClick(this, 7)">星期日</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table id="courseTable" align="center" border="3" width="800" cellpadding="3">
+					<tr id="header" align="center">
+						<th>课程名</th>
+						<th>教室</th>
+						<th>节次</th>
+						<th>教师</th>
+					</tr>
+					<tr class="courseRow" align="center">
+						<td>Web技术</td>
+						<td>海洋学院605</td>
+						<td>星期五 1-2</td>
+						<td>刘猛</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
 </body>
 
 </html>
