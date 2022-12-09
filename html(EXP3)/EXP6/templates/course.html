@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程表</title>
+    <link href="../static/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../static/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<table class="table table-striped">
+		<tr>
+			<td>
+				<h1 align="center">林鹏飞2022-2023学年秋季学期课程表</h1>
+			</td>
+		</tr>
+		<tr align="center">
+			<td>
+                <button class="btn btn-link"><a href="/?day={{ 0 }}">全周</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 1 }}">星期一</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 2 }}">星期二</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 3 }}">星期三</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 4 }}">星期四</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 5 }}">星期五</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 6 }}">星期六</a></button>
+                <button class="btn btn-link"><a href="/?day={{ 7 }}">星期日</a></button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="table table-striped" id="courseTable" align="center" border="3" width="800" cellpadding="3">
+					<tr id="header" align="center">
+						<th>课程名</th>
+						<th>教室</th>
+						<th>节次</th>
+						<th>教师</th>
+					</tr>
+                    {% for course in courseData %}
+                        <tr>
+                            {% for d in course %}
+                                <td>{{ d }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

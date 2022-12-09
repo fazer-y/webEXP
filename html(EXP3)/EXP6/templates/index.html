@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乘法表数字输入</title>
+    <link href="../static/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../static/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style>
+        #submit{
+            margin-left: 60px;
+            margin-right: 30px;
+        }
+        #reset{
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn btn-link"><a href="/show2">转到SHOW2</a></button>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h1 align="center">{{ message }}</h1>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <br/>
+                <form class="form-horizontal" action="/show1" method="post">
+                    <div class="form-group">
+                        <label class="control-label" for="startNum" >
+                            起始数字：
+                            <input type="text" id="startNum" name="startNum">
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="endNum">
+                            终止数字：
+                            <input type="text" id="endNum" name="endNum">
+                        </label>
+                    </div>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9"></div>
+                    <div class="form-group">
+                        <p>
+                            <input class="btn btn-primary" name="submit" id="submit" type="submit" value="绘制">
+                            <input class="btn btn-primary" name="reset" id="reset" type="reset" value="重置">
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
